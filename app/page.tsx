@@ -1,4 +1,5 @@
 import Footer from "./components/Footer";
+import AboutShowcase from "./components/AboutShowcase";
 import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
 import Reveal from "./components/Reveal";
@@ -7,27 +8,6 @@ import Section from "./components/Section";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <header className="border-b border-foreground/10">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-5">
-          <a
-            href="#top"
-            className="font-mono text-xs tracking-[0.22em] text-foreground/70 transition-colors hover:text-foreground"
-          >
-            ASWIN
-          </a>
-          <nav className="flex items-center gap-5 text-sm text-foreground/70">
-            <a className="transition-colors hover:text-foreground" href="#what">
-              What I do
-            </a>
-            <a className="transition-colors hover:text-foreground" href="#work">
-              Work
-            </a>
-            <a className="transition-colors hover:text-foreground" href="#about">
-              About
-            </a>
-          </nav>
-        </div>
-      </header>
 
       <main id="top">
         <Hero
@@ -106,14 +86,6 @@ export default function Home() {
             </div>
           </Reveal>
         </Section>
-
-        <Footer
-          email="hello@aswin.dev"
-          links={[
-            { label: 'GitHub', href: 'https://github.com/' },
-            { label: 'LinkedIn', href: 'https://linkedin.com/' },
-          ]}
-        />
       </main>
     </div>
   );
