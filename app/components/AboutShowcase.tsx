@@ -23,6 +23,7 @@ export default function AboutShowcase({ name, headline, bio }: AboutShowcaseProp
                 <Image
                   src="/aswin-image.png"
                   alt={`Portrait of ${name}`}
+                  quality={50}
                   width={760}
                   height={980}
                   className="h-auto w-full object-cover"
@@ -48,15 +49,6 @@ export default function AboutShowcase({ name, headline, bio }: AboutShowcaseProp
               <p className="mt-5 text-sm leading-7 text-foreground/70 sm:text-base">
                 {bio}
               </p>
-
-              <div className="mt-8">
-                <a
-                  href="#about"
-                  className="inline-flex h-11 items-center justify-center rounded-full border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:border-foreground/30 hover:bg-foreground/5"
-                >
-                  Learn more
-                </a>
-              </div>
             </div>
           </Reveal>
         </div>

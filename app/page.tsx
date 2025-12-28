@@ -1,51 +1,59 @@
-import Footer from "./components/Footer";
-import AboutShowcase from "./components/AboutShowcase";
+
 import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
 import Reveal from "./components/Reveal";
 import Section from "./components/Section";
+import CapabilityCard from "./components/CapabilityCard";
+import { FaServer } from "react-icons/fa";
+import { FiPackage } from "react-icons/fi";
+import { PiCodeFill } from "react-icons/pi";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-
+    <div className="min-h-screen pt-16">
       <main id="top">
         <Hero
           name="Aswin"
           role="React Full‑Stack Developer"
           tagline="I build high-signal web products with calm UI, predictable state, and performance that feels invisible."
         />
-
-        <Section id="what" eyebrow="Capabilities" title="What I do">
+        <Section id="what">
           <div className="grid gap-6 sm:grid-cols-3">
-            <Reveal>
-              <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.02] p-6">
-                <p className="text-sm font-medium text-foreground">Frontend</p>
-                <p className="mt-2 text-sm leading-7 text-foreground/70">
-                  Accessible, responsive UI systems with React + TypeScript.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.02] p-6">
-                <p className="text-sm font-medium text-foreground">Backend</p>
-                <p className="mt-2 text-sm leading-7 text-foreground/70">
-                  APIs that are boring (in a good way): fast, typed, observable.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.02] p-6">
-                <p className="text-sm font-medium text-foreground">Product</p>
-                <p className="mt-2 text-sm leading-7 text-foreground/70">
-                  From idea to shipped—tight scopes, crisp UX, fewer surprises.
-                </p>
-              </div>
-            </Reveal>
+            <CapabilityCard
+              title="Frontend"
+              description="Accessible, responsive UI systems built with a focus on clarity, performance, and long-term maintainability."
+              tools={[
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Styled Components",
+              ]}
+              icon={<PiCodeFill className="h-6 w-6" />}
+            />
+
+            <CapabilityCard
+              title="Backend"
+              description="Reliable backend systems and APIs that are intentionally boring—fast, typed, and easy to reason about."
+              tools={[
+                "Supabase",
+                "PostgreSQL",
+                "Edge Functions",
+              ]}
+              icon={<FaServer className="h-6 w-6" />}
+            />
+
+            <CapabilityCard
+              title="Product"
+              description="End-to-end ownership from idea to deployment, with clear scope, thoughtful UX, and fewer surprises."
+              tools={["System Design", "UX Decisions", "Shipping", "Iteration"]}
+              icon={<FiPackage className="h-6 w-6" />}
+              
+            />
           </div>
         </Section>
 
-        <Section id="work" eyebrow="Selected" title="Selected work">
+        <Section id="projects" eyebrow="Selected" title="Selected Projects">
           <div className="grid gap-6 md:grid-cols-2">
             <ProjectCard
               name="Signalboard"
@@ -71,20 +79,6 @@ export default function Home() {
               </p>
             </Reveal>
           </div>
-        </Section>
-
-        <Section id="about" eyebrow="Human" title="About">
-          <Reveal>
-            <div className="max-w-2xl">
-              <p className="text-base leading-8 text-foreground/70 sm:text-lg">
-                I’m a developer who cares about how software feels. I like building
-                interfaces that read clearly, move subtly, and hold up under real
-                usage. Outside of code, I’m usually refining systems, collecting
-                small design references, or simplifying something that’s gotten
-                noisy.
-              </p>
-            </div>
-          </Reveal>
         </Section>
       </main>
     </div>

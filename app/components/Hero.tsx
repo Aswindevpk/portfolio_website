@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
-import { Atom, Triangle, Wind } from "lucide-react";
+import { FaJsSquare } from "react-icons/fa";
+import { SiSupabase } from "react-icons/si";
+import { BiLogoTailwindCss } from "react-icons/bi";
+import { Briefcase, MessageCircle } from "lucide-react";
 
 type HeroProps = {
   name: string;
@@ -54,17 +57,19 @@ export default function Hero({ name, role, tagline }: HeroProps) {
             <Reveal delay={0.15}>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="#work"
-                  className="inline-flex h-11 items-center justify-center rounded-full bg-accent px-6 text-sm font-medium text-background transition hover:opacity-90"
+                  href="#projects"
+                  className="group flex h-11 items-center justify-center gap-2 rounded-full border border-accent/30 bg-accent/15 px-6 text-sm font-medium text-foreground transition hover:bg-accent/20"
                 >
-                  View Work
+                  <Briefcase className="h-4 w-4" />
+                  View Projects
                 </a>
 
                 <a
                   href="#contact"
-                  className="inline-flex h-11 items-center justify-center rounded-full border border-foreground/15 px-6 text-sm font-medium transition hover:border-foreground/30 hover:bg-foreground/5"
+                  className="flex h-11 items-center justify-center gap-2 rounded-full border-0 bg-white px-6 text-sm font-semibold text-violet-600 transition hover:bg-white/90 hover:shadow-md"
                 >
-                  Contact
+                  <MessageCircle className="h-4 w-4" />
+                  Let's Talk
                 </a>
               </div>
             </Reveal>
@@ -99,44 +104,44 @@ export default function Hero({ name, role, tagline }: HeroProps) {
               {/* ---------- Floating Stat Badges ---------- */}
               <div className="pointer-events-none absolute inset-0 z-10">
                 {/* React */}
-                <div className="absolute left-[-10%] bottom-12">
+                <div className="absolute left-[-5%] bottom-16">
                   <div className="flex items-center gap-3 rounded-2xl border border-accent/30 bg-transparent px-4 py-3 backdrop-blur-sm shadow-lg">
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/20">
-                      <Atom className="h-5 w-5 text-accent" />
+                      <FaJsSquare className="h-5 w-5 text-accent" />
                     </div>
                     <div className="text-left">
-                      <p className="text-sm font-semibold text-white">React</p>
-                      <p className="text-xs text-white/70">1+ year</p>
+                      <p className="text-sm font-semibold text-white">JavaScript</p>
+                      <p className="text-xs text-white/70">React.js / Next.js</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Next.js */}
-                <div className="absolute left-[40%] bottom-[-10%]">
+                <div className="absolute left-[40%] bottom-[-5%]">
                   <div className="flex items-center gap-3 rounded-2xl border border-accent/30 bg-transparent px-4 py-3 backdrop-blur-sm shadow-lg">
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/20">
-                      <Triangle className="h-5 w-5 text-accent" />
+                      <SiSupabase className="h-5 w-5 text-accent" />
                     </div>
                     <div className="text-left">
                       <p className="text-sm font-semibold text-white">
-                        Next.js
+                        Supabase
                       </p>
-                      <p className="text-xs text-white/70">App Router</p>
+                      <p className="text-xs text-white/70">PostgreSQL</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Tailwind */}
-                <div className="absolute right-[-10%] bottom-24">
+                <div className="absolute right-[-5%] bottom-24">
                   <div className="flex items-center gap-3 rounded-2xl border border-accent/30 bg-transparent px-4 py-3 backdrop-blur-sm shadow-lg">
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/20">
-                      <Wind className="h-5 w-5 text-accent" />
+                      <BiLogoTailwindCss className="h-5 w-5 text-accent" />
                     </div>
                     <div className="text-left">
                       <p className="text-sm font-semibold text-white">
-                        Tailwind
+                        CSS
                       </p>
-                      <p className="text-xs text-white/70">UI Focus</p>
+                      <p className="text-xs text-white/70">Tailwind </p>
                     </div>
                   </div>
                 </div>
@@ -150,6 +155,7 @@ export default function Hero({ name, role, tagline }: HeroProps) {
                   width={920}
                   height={980}
                   priority
+                  quality={70}
                   className=" w-full object-contain opacity-80 saturate-125 drop-shadow-[0_25px_50px_rgba(0,0,0,0.45)]"
                 />
                 {/* Bottom fade (hides harsh PNG end) */}

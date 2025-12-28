@@ -2,7 +2,7 @@ import AboutShowcase from "../components/AboutShowcase";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-16">
       <AboutShowcase
         name="Aswin"
         headline="I deliver exceptional user experiences across various platforms."
