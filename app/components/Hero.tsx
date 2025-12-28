@@ -65,7 +65,9 @@ export default function Hero({ name, role, tagline }: HeroProps) {
                 </a>
 
                 <a
-                  href="#contact"
+                  href="https://www.linkedin.com/in/aswindevpk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-11 items-center justify-center gap-2 rounded-full border-0 bg-white px-6 text-sm font-semibold text-violet-600 transition hover:bg-white/90 hover:shadow-md"
                 >
                   <MessageCircle className="h-4 w-4" />
@@ -151,7 +153,7 @@ export default function Hero({ name, role, tagline }: HeroProps) {
               <div className="relative">
                 <Image
                   src="/hero-image.png"
-                  alt={`${name} portrait`}
+                  alt="Aswin Dev – Full Stack Developer"
                   width={920}
                   height={980}
                   priority

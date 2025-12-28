@@ -81,7 +81,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             {/* Resume */}
             <a
-              href="/Aswin_Resume.pdf"
+              href="https://docs.google.com/document/d/1ZfFOXRHLld9hJHb9yFR9JTMw9vLqSdH1xpqv2EfxpSM/edit?usp=drive_link"
               download
               className="hidden h-10 items-center gap-2 rounded-full border border-foreground/15 bg-background/40 px-4 text-sm font-medium text-foreground/80 transition hover:bg-foreground/5 sm:inline-flex"
             >
@@ -90,13 +90,15 @@ export default function Navbar() {
             </a>
 
             {/* Primary CTA */}
-            <Link
-              href="/contact"
+            <a
+              href="https://www.linkedin.com/in/aswindevpk/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex h-10 items-center gap-2 rounded-full border-0 bg-white px-4 text-sm font-semibold text-violet-600 transition hover:bg-white/90 hover:shadow-md"
             >
               <MessageCircle className="h-4 w-4" />
-              Let’s Talk
-            </Link>
+              Let's Talk
+            </a>
           </div>
         </div>
       </div>

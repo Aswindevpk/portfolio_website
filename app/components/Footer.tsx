@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { SiDevpost } from 'react-icons/si';
-import Reveal from './Reveal';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
 
 type SocialLink = {
   name: string;
@@ -15,25 +14,24 @@ type FooterLink = {
 };
 
 type FooterProps = {
-  email: string;
   links: FooterLink[];
 };
 
-export default function Footer({ email, links }: FooterProps) {
+export default function Footer({ links }: FooterProps) {
   const socialLinks: SocialLink[] = [
     {
       name: 'GitHub',
-      href: 'https://github.com/yourusername',
+      href: 'https://github.com/Aswindevpk',
       icon: <FaGithub className="h-5 w-5" />
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/yourusername',
+      href: 'https://www.linkedin.com/in/aswindevpk/',
       icon: <FaLinkedin className="h-5 w-5" />
     },
     {
       name: 'Email',
-      href: `mailto:${email}`,
+      href: 'mailto:aswindevpk014@gmail.com',
       icon: <FaEnvelope className="h-5 w-5" />
     }
   ];

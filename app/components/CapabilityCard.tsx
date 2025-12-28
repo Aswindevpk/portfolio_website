@@ -23,11 +23,28 @@ import {
   SiStorybook
 } from 'react-icons/si';
 
-type CapabilityCardProps = {
+// Define the possible icon names as a type
+type IconName = 
+  | 'React' 
+  | 'Next.js' 
+  | 'TypeScript' 
+  | 'Tailwind CSS' 
+  | 'Styled Components' 
+  | 'Supabase' 
+  | 'PostgreSQL' 
+  | 'Node.js' 
+  | 'Figma' 
+  | 'Framer' 
+  | 'Design Systems' 
+  | 'UX Decisions' 
+  | 'Shipping' 
+  | 'Iteration';
+
+interface CapabilityCardProps {
   title: string;
   description: string;
   icon: ReactElement;
-  tools: string[];
+  tools: IconName[];
 };
 
 const iconMap = {

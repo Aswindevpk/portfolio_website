@@ -9,7 +9,7 @@ type SectionProps = {
 
 export default function Section({ id, eyebrow, title, children }: SectionProps) {
   return (
-    <section id={id} className="py-16 sm:py-24">
+    <section id={id} className="py-8">
       <div className="mx-auto w-full max-w-5xl px-6">
         <div className="max-w-2xl">
           {eyebrow ? (

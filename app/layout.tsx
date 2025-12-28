@@ -15,8 +15,51 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Personal portfolio",
+  title: {
+    default: "Aswin Dev | Full-Stack Developer",
+    template: "%s | Aswin Dev",
+  },
+  description:
+    "Full-stack React & Next.js developer building scalable web apps.",
+  keywords: [
+    "Next.js Developer",
+    "React Developer",
+    "Full Stack Developer",
+    "JavaScript",
+    "Supabase",
+  ],
+  authors: [{ name: "Aswin Dev" }],
+  creator: "Aswin Dev",
+  metadataBase: new URL("https://aswindev.in"),
+  openGraph: {
+    title: "Aswin Dev | Full-Stack Developer",
+    description: "Modern web apps with Next.js & React",
+    url: "https://yourdomain.com",
+    siteName: "Aswin Dev",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Aswin Dev Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aswin Dev",
+    description: "Full-stack developer portfolio",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+    alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +74,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        <Footer email="hello@aswin.dev" links={[]} />
+        <Footer links={[]} />
       </body>
     </html>
   );

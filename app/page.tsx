@@ -9,7 +9,26 @@ import { FiPackage } from "react-icons/fi";
 import { PiCodeFill } from "react-icons/pi";
 
 export default function Home() {
+    const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Aswin Dev",
+    url: "https://yourdomain.com",
+    jobTitle: "Full Stack Developer",
+    sameAs: [
+      "https://github.com/Aswindevpk",
+      "https://linkedin.com/in/aswindev",
+    ],
+  };
+
+
   return (
+    <>
+          <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
     <div className="min-h-screen pt-16">
       <main id="top">
         <Hero
@@ -37,8 +56,7 @@ export default function Home() {
               description="Reliable backend systems and APIs that are intentionally boring—fast, typed, and easy to reason about."
               tools={[
                 "Supabase",
-                "PostgreSQL",
-                "Edge Functions",
+                "PostgreSQL"
               ]}
               icon={<FaServer className="h-6 w-6" />}
             />
@@ -46,41 +64,44 @@ export default function Home() {
             <CapabilityCard
               title="Product"
               description="End-to-end ownership from idea to deployment, with clear scope, thoughtful UX, and fewer surprises."
-              tools={["System Design", "UX Decisions", "Shipping", "Iteration"]}
+              tools={[ "UX Decisions", "Shipping", "Iteration"]}
               icon={<FiPackage className="h-6 w-6" />}
               
             />
           </div>
         </Section>
 
-        <Section id="projects" eyebrow="Selected" title="Selected Projects">
+        <Section id="projects" eyebrow="Featured" title="My Projects">
           <div className="grid gap-6 md:grid-cols-2">
             <ProjectCard
-              name="Signalboard"
-              description="A minimal team dashboard that surfaces only what matters: trends, blockers, and next actions."
-              stack={["Next.js", "React", "TypeScript", "Tailwind", "Postgres"]}
-            />
-            <ProjectCard
-              name="Shipnotes"
-              description="Release notes that write themselves: changelog drafting from PRs, labels, and commits."
-              stack={["Node.js", "tRPC", "Prisma", "Redis"]}
-            />
-            <ProjectCard
-              name="Luma Checkout"
-              description="A checkout flow focused on speed and clarity, with micro-interactions and instant validation."
-              stack={["React", "Zod", "Framer Motion", "Playwright"]}
+              name="Medium Clone"
+              description="A full-featured blogging platform with article publishing, user profiles, and interactive features like comments and claps."
+              stack={["React", "Node.js", "MongoDB", "Express", "Redux"]}
+              demoUrl="https://blog.aswindev.in/"
+              githubUrl="https://github.com/Aswindevpk/binary-mockup"
             />
           </div>
-
-          <div className="mt-10">
-            <Reveal>
-              <p className="text-sm text-foreground/60">
-                Hover interactions only for now — navigation comes in Phase 2.
-              </p>
-            </Reveal>
-          </div>
+{/* 
+          <div className="mt-16">
+            <h3 className="text-lg font-medium text-foreground/80 mb-6">Building</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <ProjectCard
+                name="Malo E-commerce"
+                description="A modern e-commerce platform with product listings, cart functionality, and secure checkout process."
+                stack={["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"]}
+                isComingSoon={true}
+              />
+              <ProjectCard
+                name="Signalboard"
+                description="A minimal team dashboard that surfaces only what matters: trends, blockers, and next actions."
+                stack={["Next.js", "React", "TypeScript", "Tailwind", "Postgres"]}
+                isComingSoon={true}
+              />
+            </div>
+          </div> */}
         </Section>
       </main>
     </div>
+    </>
   );
 }
