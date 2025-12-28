@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Aswin Dev | Full-Stack Developer",
-    template: "%s | Aswin Dev",
+    default: "Aswin Dev | React & Next.js Developer | Portfolio & Projects",
+    template: "%s | Aswin Dev - React & Next.js Developer",
   },
   description:
-    "Full-stack React & Next.js developer building scalable web apps.",
+    "Experienced Full-Stack Developer specializing in React, Next.js, and modern web technologies. I build fast, responsive, and scalable web applications with clean code and great user experiences. Let's create something amazing together!",
   keywords: [
     "Next.js Developer",
     "React Developer",
