@@ -1,10 +1,36 @@
 import AboutShowcase from "../components/AboutShowcase";
+import robots from "../robots";
 
 export const metadata = {
   title: "About | Aswin Dev",
   description: "Learn more about Aswin, a full-stack developer passionate about building exceptional web experiences.",
-    alternates: {
-    canonical: "/projects",
+  keywords:["fullstack","react"],
+  openGraph:{
+    title:"About Aswin",
+    description: "Learn more about Aswin, a full-stack developer passionate about building exceptional web experiences.",
+    url: "https://aswin.dev/about",
+    type: "website",
+    images: [
+      {
+        url: "https://aswin.dev/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Aswin Dev - About"
+      }
+    ]
+  },
+  robots:{
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      nocache: true,
+    }
+  },
+  alternates: {
+    canonical: "/about",
   },
 };
 
