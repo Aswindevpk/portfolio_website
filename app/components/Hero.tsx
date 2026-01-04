@@ -35,6 +35,8 @@ export default function Hero({ name, role, tagline }: HeroProps) {
                 <div className="h-28 w-[60%] rounded-full bg-accent/15 blur-[80px]" />
               </div>
             </div>
+            <h1 className="hidden">Full-Stack React & Next.js Developer Building Modern Web Applications</h1>
+
             <Reveal>
               <p className="text-sm font-medium tracking-[0.16em] text-foreground/60">
                 {role}
@@ -42,10 +44,10 @@ export default function Hero({ name, role, tagline }: HeroProps) {
             </Reveal>
 
             <Reveal delay={0.05}>
-              <h1 className="mt-4 text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
+              <h2 className="mt-4 text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
                 Hello, I’m {name}
                 <span className="text-accent">.</span>
-              </h1>
+              </h2>
             </Reveal>
 
             <Reveal delay={0.1}>

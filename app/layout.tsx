@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Aswin Dev - React & Next.js Developer",
   },
   description:
-    "Experienced Full-Stack Developer specializing in React, Next.js, and modern web technologies. I build fast, responsive, and scalable web applications with clean code and great user experiences. Let's create something amazing together!",
+    "Experienced Full-Stack React and Next.js Developer building fast, scalable, and responsive web applications with modern technologies and clean, maintainable code.",
   keywords: [
     "Next.js Developer",
     "React Developer",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://aswindev.in"),
   openGraph: {
     title: "Aswin Dev | React & Next.js Developer",
-    description: "Experienced Full-Stack Developer specializing in React, Next.js, and modern web technologies. I build fast, responsive, and scalable web applications with clean code and great user experiences",
+    description: "Experienced Full-Stack React and Next.js Developer building fast, scalable, and responsive web applications with modern technologies and clean, maintainable code.",
     url: "https://aswindev.in",
     siteName: "Aswin Dev",
     images: [
@@ -50,9 +50,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Aswin Dev | React & Next.js Developer",
-    description: "Experienced Full-Stack Developer specializing in React, Next.js, and modern web technologies. I build fast, responsive, and scalable web applications with clean code and great user experiences",
+    description: "Experienced Full-Stack React and Next.js Developer building fast, scalable, and responsive web applications with modern technologies and clean, maintainable code.",
     images: ["/og.webp"],
-  }
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
