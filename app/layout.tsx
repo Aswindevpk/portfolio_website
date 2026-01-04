@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Aswin Dev | React & Next.js Developer | Portfolio & Projects",
+    default: "Aswin Dev | React & Next.js Developer",
     template: "%s | Aswin Dev - React & Next.js Developer",
   },
   description:
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
   creator: "Aswin Dev",
   metadataBase: new URL("https://aswindev.in"),
   openGraph: {
-    title: "Aswin Dev | Full-Stack Developer",
-    description: "Modern web apps with Next.js & React",
-    url: "https://yourdomain.com",
+    title: "Aswin Dev | React & Next.js Developer",
+    description: "Experienced Full-Stack Developer specializing in React, Next.js, and modern web technologies. I build fast, responsive, and scalable web applications with clean code and great user experiences",
+    url: "https://aswindev.in",
     siteName: "Aswin Dev",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og.webp",
         width: 1200,
         height: 630,
         alt: "Aswin Dev Portfolio",
@@ -49,17 +49,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aswin Dev",
-    description: "Full-stack developer portfolio",
-    images: ["/og-image.png"],
-  },
-  icons: {
-    icon: "/favicon.ico?v=2",
-    apple: "/apple-icon.png",
-  },
-    alternates: {
-    canonical: "/",
-  },
+    title: "Aswin Dev | React & Next.js Developer",
+    description: "Experienced Full-Stack Developer specializing in React, Next.js, and modern web technologies. I build fast, responsive, and scalable web applications with clean code and great user experiences",
+    images: ["/og.webp"],
+  }
 };
 
 export default function RootLayout({

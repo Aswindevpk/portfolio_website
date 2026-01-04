@@ -6,13 +6,13 @@ export const metadata = {
   description: "Learn more about Aswin, a full-stack developer passionate about building exceptional web experiences.",
   keywords:["fullstack","react"],
   openGraph:{
-    title:"About Aswin",
+    title:"About Aswin Dev - Full-Stack Developer",
     description: "Learn more about Aswin, a full-stack developer passionate about building exceptional web experiences.",
-    url: "https://aswin.dev/about",
+    url: "https://aswindev.in/about",
     type: "website",
     images: [
       {
-        url: "https://aswin.dev/og-image.jpg",
+        url: "https://aswindev.in/og.webp",
         width: 1200,
         height: 630,
         alt: "Aswin Dev - About"
