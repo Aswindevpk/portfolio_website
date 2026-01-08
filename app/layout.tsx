@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://aswindev.in"),
   openGraph: {
     title: "Aswin Dev | React & Next.js Developer",
-    description: "Experienced Full-Stack React and Next.js Developer building fast, scalable, and responsive web applications with modern technologies and clean, maintainable code.",
+    description:
+      "Experienced Full-Stack React and Next.js Developer building fast, scalable, and responsive web applications with modern technologies and clean, maintainable code.",
     url: "https://aswindev.in",
     siteName: "Aswin Dev",
     images: [
@@ -50,8 +51,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Aswin Dev | React & Next.js Developer",
-    description: "Experienced Full-Stack React and Next.js Developer building fast, scalable, and responsive web applications with modern technologies and clean, maintainable code.",
+    description:
+      "Experienced Full-Stack React and Next.js Developer building fast, scalable, and responsive web applications with modern technologies and clean, maintainable code.",
     images: ["/og.webp"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-v3.png", type: "image/png" },
+      { url: "/favicon-v3.ico" },
+    ],
   },
   alternates: {
     canonical: "/",
@@ -65,6 +73,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <meta name="apple-mobile-web-app-title" content="Aswin" />
+      <link rel="icon" href="/favicon-v3.ico" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground antialiased`}
       >
